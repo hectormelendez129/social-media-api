@@ -2,6 +2,8 @@
 
 A Node.js and Express web application where users can post messages, give thumbs up/down reactions, and delete posts. Designed with a dark, modern UI theme and real-time interaction logic powered by JavaScript and MongoDB.
 
+## [Live Demo](https://social-media-api-fwft.onrender.com/)
+
 ## Table of Contents
 1. [Project Overview](#project-overview)
 2. [Features](#features)
@@ -66,6 +68,8 @@ http://localhost:3000
 5. The message feed updates dynamically without refreshing the page.
 
 ## Screenshots
+[Live Demo](https://social-media-api-fwft.onrender.com/)
+
 <img width="834" height="883" alt="Screenshot 2025-10-24 002846" src="https://github.com/user-attachments/assets/cb05403d-a939-4708-bd0a-008d8ab71d9d" />
 
 ## Acknowledgements

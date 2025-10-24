@@ -7,8 +7,8 @@ Array.from(thumbUp).forEach(function (element1) {
   element1.addEventListener('click', function () {
     const name = this.parentNode.parentNode.childNodes[1].innerText
     const msg = this.parentNode.parentNode.childNodes[3].innerText
-    const thumbUp = parseFloat(this.parentNode.parentNode.childNodes[5].innerText)
-    const thumbDown = parseFloat(this.parentNode.parentNode.childNodes[7].innerText)
+    const total = parseFloat(this.parentNode.parentNode.childNodes[5].innerText)
+    // const thumbDown = parseFloat(this.parentNode.parentNode.childNodes[7].innerText)
 
     fetch('/messages/thumbup', {
       method: 'put',
@@ -16,9 +16,7 @@ Array.from(thumbUp).forEach(function (element1) {
       body: JSON.stringify({
         'name': name,
         'msg': msg,
-        'thumbUp': thumbUp,
-        'thumbDown': thumbDown
-
+        'thumbUp': total
       })
     })
       .then(response => {
@@ -36,16 +34,15 @@ Array.from(thumbDown).forEach(function (element) {
   element.addEventListener('click', function () {
     const name = this.parentNode.parentNode.childNodes[1].innerText
     const msg = this.parentNode.parentNode.childNodes[3].innerText
-    const thumbUp = parseFloat(this.parentNode.parentNode.childNodes[5].innerText)
-    const thumbDown = parseFloat(this.parentNode.parentNode.childNodes[7].innerText)
+    const total = parseFloat(this.parentNode.parentNode.childNodes[5].innerText)
+    // const thumbDown = parseFloat(this.parentNode.parentNode.childNodes[7].innerText)
     fetch('/messages/thumbdown', {
       method: 'put',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         'name': name,
         'msg': msg,
-        'thumbUp': thumbUp,
-        'thumbDown': thumbDown
+        'thumbUp': total
       })
     })
       .then(response => {
